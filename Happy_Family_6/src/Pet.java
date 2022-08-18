@@ -85,6 +85,9 @@ public class Pet {
                 ", habits=" + Arrays.toString(habits) +
                 '}';
     }
+//   public void finalize()  {
+//        System.out.println(nickName);
+//    }
 
 
 }
