@@ -114,6 +114,10 @@ public class Family {
         return 2 + this.children.length;
 
     }
+//    public void finalize()  {
+//        System.out.println( getFather().getName() + getMother().getName());
+//
+//    }
 
 
     }
