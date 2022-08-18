@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         Pet pet = new Pet(AnimalSpecies.CAT,"Koukie",2,15,new String[]{"eating","sleeping"});
@@ -5,8 +7,9 @@ public class Main {
         Human father = new Human("John","Doe",1980);
 
         Family mFamily = new Family(mother,father);
-        Human child = new Human("Zuzu","Doe",2000,80,new String[][]{{"monday","watch the film"},{"sunday","meet the friends"}});
-        Human child1 = new Human("Kate", "Parry", 2004, 80, new String[][]{{"monday","watch the film"},{"sunday","meet the friends"}});
+        Human child = new Human("Zuzu","Doe",2000,80,new String[][]{{DaysEnum.MONDAY.name().toLowerCase(Locale.ROOT),"watch the film"},{DaysEnum.THURSDAY.name().toLowerCase(Locale.ROOT),"meet the friends"}});
+        Human child1 = new Human("Kate", "Parry", 2004, 80, new String[][]{{DaysEnum.THURSDAY.name().toLowerCase(Locale.ROOT),"watch the film"},{DaysEnum.FRIDAY.name().toLowerCase(Locale.ROOT),"meet the friends"}});
+
 
         System.out.println(pet);
         System.out.println(mother.getName());
@@ -17,5 +20,8 @@ public class Main {
         mFamily.deleteChild(1);
         System.out.println(mFamily);
         System.out.println(mFamily.countFamily());
+        Human.garbaceCollectorDeleting();
+
     }
+
 }
