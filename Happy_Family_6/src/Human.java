@@ -20,6 +20,7 @@ public class Human {
     }
 
     private Family family;
+
     public String getName() {
         return name;
     }
@@ -150,12 +151,18 @@ public class Human {
                 ", surname='" + surName + '\'' +
                 ", year=" + year +
                 ", iq=" + iq +
-                ", scheduler=" + Arrays.deepToString(schedule)+
+                ", scheduler=" + Arrays.deepToString(schedule) +
                 '}';
     }
 
-    public void finalize()  {
-        System.out.println("Name is removed.." + name);
+    //    public void finalize()  {
+//        System.out.println(name + surName);
+//    }
+    public static void garbaceCollectorDeleting() {
+        for (int i = 0; i < 1000000; i++) {
+            Human human = new Human();
+        }
+
     }
 
 }
