@@ -63,57 +63,19 @@ public class Family {
                 '}';
     }
 
-    public String toWelcomeTheFavorite() {
-        return "Welcome" + mother.getName() + "," + father.getName();
+    public void toWelcomeFavourite(){
+        System.out.println("To welcome the favourite.....");
+    }
+    public void toDescribeFavourite(){
+        System.out.println("To describe the favourite.....");
+    }
+    public void toFeed(){
+        System.out.println("To Feed.....");
     }
 
-    public String toDescribeTheFavourite() {
-        return "Very kindly " + mother.getName();
-    }
+   
+    
 
-    public void feed() {
-        System.out.println("I am eating with mom -  " + mother.getName());
-    }
-
-    public void addChild(Human child) {
-        if (child != null) {
-            Human[] children = new Human[this.children.length + 1];
-            for (int i = 0; i < this.children.length; i++) {
-                children[i] = getChildren()[i];
-
-            }
-            children[children.length - 1] = child;
-            setChildren(children);
-            child.setFamily(this);
-        } else {
-            getChildren();
-
-        }
-    }
-        public void deleteChild ( int arrIndex){
-            if (arrIndex > getChildren().length - 1) {
-                getChildren();
-            } else {
-                Human[] children = new Human[getChildren().length - 1];
-                if (children.length == 0) {
-                    children = new Human[0];
-                } else {
-                    for (int i = 0, j = 0; i < getChildren().length; i++) {
-                        if (i == arrIndex) {
-                            continue;
-                        }
-                        children[j++] = getChildren()[i];
-                    }
-                }
-                setChildren(children);
-            }
-
-        }
-
-    public int countFamily() {
-        return 2 + this.children.length;
-
-    }
 //    public void finalize()  {
 //        System.out.println( getFather().getName() + getMother().getName());
 //
