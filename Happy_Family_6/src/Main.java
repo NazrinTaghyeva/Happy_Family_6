@@ -17,7 +17,6 @@ public class Main {
         mFamily.addChild(child1);
         System.out.println(mFamily);
         mFamily.feed();
-        mFamily.deleteChild(1);
         System.out.println(mFamily);
         System.out.println(mFamily.countFamily());
         Human.garbaceCollectorDeleting();
