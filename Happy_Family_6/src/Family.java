@@ -77,7 +77,7 @@ public class Family {
     
 
 //    public void finalize()  {
-//        System.out.println( getFather().getName() + getMother().getName());
+//        System.out.println( getMother().getName());
 //
 //    }
 
