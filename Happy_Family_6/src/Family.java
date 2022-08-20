@@ -74,7 +74,19 @@ public class Family {
     }
 
    
-    
+    public void addChild(Human child) {
+        int length = getChildren().length;
+        Human[] newChildArr = new Human[length + 1];
+        for (int i = 0; i <= length; i++) {
+            if (i == length) {
+                newChildArr[i] = child;
+                break;
+            }
+            newChildArr[i] = getChildren()[i];
+        }
+        setChildren(newChildArr);
+        child.setFamily(this);
+    }
 
 //    public void finalize()  {
 //        System.out.println( getMother().getName());
